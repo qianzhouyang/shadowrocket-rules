@@ -7,7 +7,7 @@ iPhone Shadowrocket 个人配置。参考 [Johnshall/Shadowrocket-ADBlock-Rules-
 远程地址：
 
 ```
-https://raw.githubusercontent.com/qianzhouyang/shadowrocket-rules/main/qzy-shadowrocket.conf
+https://fastly.jsdelivr.net/gh/qianzhouyang/shadowrocket-rules@main/qzy-shadowrocket.conf
 ```
 
 1. Shadowrocket → 底部「配置」→ 右上角「+」→ 粘贴上面的地址 → 下载。
@@ -15,7 +15,7 @@ https://raw.githubusercontent.com/qianzhouyang/shadowrocket-rules/main/qzy-shado
 3. 首页「全局路由」选「配置」（也就是规则模式）。
 4. 首页选一个节点当 `PROXY`。地区组（香港/日本/美国…）会按节点名关键词自动测速。
 
-> 也可以用 URL Scheme 一键导入：`shadowrocket://config/add/https://raw.githubusercontent.com/qianzhouyang/shadowrocket-rules/main/qzy-shadowrocket.conf`
+> 也可以用 URL Scheme 一键导入：`shadowrocket://config/add/https://fastly.jsdelivr.net/gh/qianzhouyang/shadowrocket-rules@main/qzy-shadowrocket.conf`
 
 ## 各段说明
 
