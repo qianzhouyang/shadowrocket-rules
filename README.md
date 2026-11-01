@@ -21,13 +21,14 @@ https://fastly.jsdelivr.net/gh/qianzhouyang/shadowrocket-rules@main/qzy-shadowro
 
 | 段 | 作用 |
 |---|---|
-| [General] | 局域网和 Apple 验证域名不走代理，DNS 用阿里/腾讯 DoH，默认关闭 IPv6 |
+| [General] | 局域网和 Apple 验证域名不走代理，DNS 用阿里/腾讯 UDP，默认关闭 IPv6 |
 | [Proxy Group] | 策略组：AI、YouTube、Netflix、Telegram、谷歌、微软、苹果、游戏、漏网之鱼，加上 6 个地区自动测速组 |
 | 规则 0 个人覆盖 | 从 OpenClash `openclash_custom_rules.list` 同步过来，最先匹配。linuxdo.org 直连，speedtest 走漏网之鱼 |
 | 1 局域网 | 内网 IP 直连 |
 | 2 广告 | blackmatrix7 AdvertisingLite（轻量版），拒绝连接 |
 | 3–8 海外服务 | AI → 流媒体 → Telegram/Google → SteamCN 直连/游戏 → 微软/苹果 → TikTok/Twitter/GitHub/Global |
-| 9 国内 | ChinaMax 规则集 + `GEOIP,CN,DIRECT` |
+| 3.5 国内直连 | 微信/腾讯/阿里/支付宝/字节/美团/京东/拼多多/B站/百度/网易等专项规则集，前置直连 |
+| 9 国内兜底 | China 规则集 + `GEOIP,CN,DIRECT`（会解析域名，未收录的国内站按 IP 直连） |
 | 10 兜底 | `FINAL,漏网之鱼`（默认 PROXY） |
 
 ## 更新
